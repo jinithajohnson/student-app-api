@@ -1,11 +1,11 @@
 const mongoose = require("mongoose")
-const schema = mongoos.Schema(
+const schema = mongoose.Schema(
     {
-        "name":String,
-        "rollNo":String,
-        "admNo":String,
-        "college":String
+        "name":{type:String,required:true},
+        "rollNo":{type:String,required:true},
+        "admNo":{type:String,required:true},
+        "college":{type:String,required:true}
     }
 )
-let studentmodel=mongoose.Model("students",schema)
+let studentmodel=mongoose.model("students",schema)
 module.exports={studentmodel}
